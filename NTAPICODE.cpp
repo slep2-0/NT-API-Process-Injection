@@ -63,7 +63,7 @@ int main() {
 	procName += L".exe";
 	DWORD PID = GetProcessIdByName(procName); // Get the PID (later CID) of the process by the input.
 	OBJECT_ATTRIBUTES OA = { sizeof(OA), NULL }; /* Basically the properties of the thread created. (automatic) */
-	CLIENT_ID CID = { (HANDLE)PID, NULL }; /* WTLS CID!! nah lmao its just the process id, idk why its called like this */
+	CLIENT_ID CID = { (HANDLE)PID, NULL };
 	// Initialize the NTAPI functions.
 	HMODULE hNTDLL = GetMod(L"NTDLL"); /* Getting the module by using GetModuleHandleW, this is just a cleaner way so I made it into a function (took it, whatevah) */
 	/* Begin Init of NTAPI Functions */
