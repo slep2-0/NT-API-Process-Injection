@@ -7,6 +7,8 @@
 **This uses the NTAPI (ntdll.dll) undocumented API functions by microsoft. Those are basically Win32 API's (console ones), but ones that go straight to the Kernel, those are still very much detectable,
 since AV's and EDR's place hooks on those functions, view the Indirect Syscalls github page to somehow bypass this restriction**
 
+Note: This is extremely weak, NTAPI from ntdll is hooked by windows defender, and so will detect suspicious injections easily.
+
 **Steps to build**
 
 Open Visual Studio 2022
